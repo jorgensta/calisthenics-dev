@@ -4,9 +4,9 @@ import '../styles/components/Header.css';
 
 
 
-const Header = ()  => (
+const Header = (props)  => (
     <div className="Header">
-        <h1>LOGO</h1>
+        <img className="img-header" src={props.picture} height="100" width="125"></img>
         <NavBar />
     </div>
 )

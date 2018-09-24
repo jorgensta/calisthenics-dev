@@ -5,3 +5,20 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+.navlink {
+    display: flex;
+    margin: 10px;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+    text-decoration: none;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.navlink:hover{
+    color: yellow;
+    border: 1px solid yellow;
+}
