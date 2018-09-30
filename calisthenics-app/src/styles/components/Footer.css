@@ -4,7 +4,7 @@
 .Footer{
     display: flex;
     text-align: center;
-    background-color: #0e1111;
-    color: white;
+    background-color: #1f1f1f;
+    color:white;
     justify-content: center;
 }
