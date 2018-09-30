@@ -1,5 +1,8 @@
 import React from 'react';
-var accessToken = '23612221.3fcb46b.348431486f3a4fb85081d5242db9ca1c';
+import InstagramEmbed from 'react-instagram-embed'
+import Zoom from 'react-reveal/Zoom';
+import '../../styles/components/Instagram.css';
+var accessToken = '3098531026.1677ed0.e8c4ee4585184111bc75a5506d2b0fbe';
 let InstagramAPI = require('instagram-api');
 var instagramAPI = new InstagramAPI(accessToken);
 
@@ -8,25 +11,30 @@ class Instagram extends React.Component {
 
 
     state = {
-        posts: []
+        data: []
     }
 
     componentDidMount(){
 
-        instagramAPI.userSelf().then(function(result) {
-            console.log(result.data); // user info
-            console.log(result.limit); // api limit
-            console.log(result.remaining) // api request remaining
-        }, function(err){
-            console.log(err); // error info
-        });
+        instagramAPI.userSelfMedia().then(function(result) {
+            let url = result.data[0].link;
+            console.log(url)
+            return url;
+        }).then(url => this.setState({data:url}));
     }
 
     render(){
+        let data = this.state.data;
 
         return(
         <div>
-            <p>Instagram</p>
+        <Zoom >
+            <div className="instaFeed">
+                <InstagramEmbed url={data} maxWidth={320}></InstagramEmbed>
+                <InstagramEmbed url={data} maxWidth={320}></InstagramEmbed>
+                <InstagramEmbed url={data} maxWidth={320}></InstagramEmbed>
+            </div>
+        </Zoom>
         </div>
         )
     }
