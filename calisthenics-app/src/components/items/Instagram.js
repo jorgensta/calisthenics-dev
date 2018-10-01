@@ -10,46 +10,30 @@ var instagramAPI = new InstagramAPI(accessToken);
 class Instagram extends React.Component {
 
     state = {
-        data1: [],
-        data2: [],
+        data: [],
         postIndex: 0,
     }
 
     loadNextPost = () => {
-
-      let index1 = this.state.postIndex +1;
-      let url1 = this.state.data2;
-      this.setState({postIndex:index1});
-      this.setState({data1:url1});
-
-      let index2 = this.state.postIndex +2;
+      let index = this.state.postIndex +1;
+      this.setState({postIndex:index});
       instagramAPI.userSelfMedia().then(function(result) {
-          let url2 = result.data[index2].link;
-          console.log(url2);
-          return url2;
-      }).then(url2 => this.setState({data2:url2}));
-
-      console.log(this.state.postIndex);
+          let url = result.data[index].link;
+          console.log(url);
+          return url;
+      }).then(url => this.setState({data:url}));
     }
 
 
     loadPreviousPost = () => {
       if (this.state.postIndex >= 1) {
-
-        let index2 = this.state.postIndex;
-        let url2 = this.state.data1;
-        this.setState({data2:url2});
-
-        let index1 = this.state.postIndex -2;
+        let index = this.state.postIndex -1;
+        this.setState({postIndex:index});
         instagramAPI.userSelfMedia().then(function(result) {
-            console.log("Hei");
-            let url1 = result.data[index1].link;
-            console.log(url1);
-            this.setState({postIndex:index1});
-            return url1;
-        }).then(url1 => this.setState({data1:url1}));
+            let url = result.data[index].link;
+            return url;
+        }).then(url => this.setState({data:url}));
       }
-
       else {
         console.log("Fail, du ser allerede på den nyeste posten.");
       }
@@ -59,26 +43,15 @@ class Instagram extends React.Component {
 
     componentDidMount(){
       instagramAPI.userSelfMedia().then(function(result) {
-          let url1 = result.data[0].link;
-          console.log(url1);
-          return url1;
-      }).then(url1 => this.setState({data1:url1}));
-
-      instagramAPI.userSelfMedia().then(function(result) {
-          let url2 = result.data[1].link;
-          console.log(url2);
-          return url2;
-      }).then(url2 => this.setState({data2:url2}));
-
-
+          let url = result.data[0].link;
+          console.log(url);
+          return url;
+      }).then(url => this.setState({data:url}));
 
     }
 
-
-
     render(){
-        let data1 = this.state.data1;
-        let data2 = this.state.data2;
+        let data = this.state.data;
 
         return(
         <div>
@@ -86,8 +59,8 @@ class Instagram extends React.Component {
             <div className="instaFeed">
 
                 <button onClick={this.loadPreviousPost}> </button>
-                <InstagramEmbed url={data1} maxWidth={320}></InstagramEmbed>
-                <InstagramEmbed url={data2} maxWidth={320}></InstagramEmbed>
+                <InstagramEmbed url={data} maxWidth={320}></InstagramEmbed>
+
                 <button onClick={this.loadNextPost}> </button>
 
             </div>
