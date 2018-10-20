@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
 import '../styles/components/Footer.css'
+import { SocialIcon } from 'react-social-icons';
 
-const Header = ()  => (
+const Footer = ()  => (
     <div className="Footer">
-        <p>This is our Footer</p>
+        <div className="IconNavBar">
+            <SocialIcon className="Icon" url="https://www.facebook.com/ntnuicalisthenics/?ref=bookmarks"/>
+            <SocialIcon className="Icon" url="https://www.instagram.com/ntnuicalisthenics/?hl=en" />
+            <SocialIcon className="Icon" url="mailto:calisthenics-leder@ntnui.no" />
+        </div>
     </div>
 )
 
-export default Header;
+export default Footer;

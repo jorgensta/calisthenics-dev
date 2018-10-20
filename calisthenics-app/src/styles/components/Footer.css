@@ -3,8 +3,20 @@
 
 .Footer{
     display: flex;
+    flex-direction: row;
     text-align: center;
     background-color: #1f1f1f;
     color:white;
     justify-content: center;
+    height: auto;
+}
+
+.IconNavBar{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.Icon{
+    margin: 1rem;
 }

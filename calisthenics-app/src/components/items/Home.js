@@ -24,6 +24,7 @@ const Home = () => {
         <Zoom>
             <img className="frontPic" src={picture} ></img>
         </Zoom>
+
         </div>
     )
 
