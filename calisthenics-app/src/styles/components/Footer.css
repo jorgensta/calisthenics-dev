@@ -1,10 +1,9 @@
-
-
-
 .Footer{
     display: flex;
     text-align: center;
-    background-color: #1f1f1f;
+    background-color: #2f2f2f;
     color:white;
     justify-content: center;
+    align-items: center;
+    height: 100px;
 }

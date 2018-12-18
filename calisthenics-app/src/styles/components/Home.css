@@ -1,16 +1,19 @@
-
-
 .Home{
     display: flex;
     justify-content: space-evenly;
     background-color: #1f1f1f;
-    height: 500px;
+    min-height: calc(100vh - 250px);
 }
 
 .frontPic {
+    min-width: 400px;
+    min-height: 300px;
     width: 45%;
     height: 70%;
+    max-width: 700px;
+    max-height: 500px;
     align-self: center;
+    border-radius: 5px;
 }
 
 .homeTextDiv{
@@ -18,17 +21,15 @@
     flex-direction: column;
     justify-content: center;
     width: 40%;
-   
-
 }
 
 .frontText {
+  text-align: center;
     align-self: center;
     color: #ffffff;
     font-weight: 100;
     width: 80%;
     margin: 2%;
-
 }
 
 .applyButton{

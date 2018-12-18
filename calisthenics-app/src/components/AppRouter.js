@@ -11,13 +11,10 @@ import Contact from './items/Contact';
 import Footer from './Footer';
 
 
-
-
-
 const AppRouter = () => (
 
     <BrowserRouter>
-        <div>
+        <div className="wrapper">
             <App />
                 <Switch>
                     <Route path="/" component={Home} exact={true}/>
@@ -30,7 +27,6 @@ const AppRouter = () => (
             <Footer />
         </div>
     </BrowserRouter>
-
 
 )
 

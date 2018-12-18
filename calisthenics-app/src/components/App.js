@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import '../styles/components/App.css';
 import Header from './Header';
-
+import picture from '../assets/NTNUI_TRYKK.png';
 
 
 class App extends Component {
   render() {
-    let picture = require('../assets/NTNUI_TRYKK.png')
     return (
       <div className="App">
         <Header picture={picture}/>
