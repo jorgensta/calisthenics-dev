@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/components/Home.css';
+import '../../styles/components/items/Home.css';
 import Zoom from 'react-reveal/Zoom';
 import picture from '../../assets/FrontpagePicture.jpg';
 

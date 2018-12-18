@@ -1,7 +1,7 @@
 import React from 'react';
 import InstagramEmbed from 'react-instagram-embed'
 import Zoom from 'react-reveal/Zoom';
-import '../../styles/components/Instagram.css';
+import '../../styles/components/items/Instagram.css';
 var accessToken = '3098531026.1677ed0.e8c4ee4585184111bc75a5506d2b0fbe';
 let InstagramAPI = require('instagram-api');
 var instagramAPI = new InstagramAPI(accessToken);

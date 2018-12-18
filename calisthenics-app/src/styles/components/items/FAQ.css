@@ -1,0 +1,19 @@
+.FAQcontainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    justify-content: center;
+}
+
+.Collapse{
+    width: 40%;
+    border: 1px solid white;
+    align-self: center;
+    color: white;
+    margin: 0.2rem;
+    padding: 0.4rem;
+}
+
+.FAQtext {
+    color: white;
+}
