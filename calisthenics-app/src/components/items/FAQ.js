@@ -1,6 +1,6 @@
 import React from 'react';
 import Collapsible from 'react-collapsible';
-import '../../styles/components/FAQ.css'
+import '../../styles/components/items/FAQ.css'
 
 const Q1 = "This is question 1"
 const Q2 = "this is question 2"

@@ -1,0 +1,17 @@
+.Training {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: calc(100vh - 250px);
+}
+
+.Collapse{
+    width: 40%;
+    border: 1px solid white;
+    align-self: center;
+    color: white;
+    margin: 0.2rem;
+    padding: 0.4rem;
+    text-align: center;
+}

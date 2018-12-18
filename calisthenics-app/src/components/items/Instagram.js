@@ -54,14 +54,14 @@ class Instagram extends React.Component {
         let data = this.state.data;
 
         return(
-        <div>
+        <div className="Instagram">
         <Zoom >
             <div className="instaFeed">
 
-                <button onClick={this.loadPreviousPost}> </button>
+                <button className="knapp" onClick={this.loadPreviousPost}> </button>
                 <InstagramEmbed url={data} maxWidth={320}></InstagramEmbed>
 
-                <button onClick={this.loadNextPost}> </button>
+                <button className="knapp" onClick={this.loadNextPost}> </button>
 
             </div>
         </Zoom>

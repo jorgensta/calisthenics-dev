@@ -1,0 +1,8 @@
+.About {
+  box-sizing: border-box;
+  min-height: calc(100vh - 250px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

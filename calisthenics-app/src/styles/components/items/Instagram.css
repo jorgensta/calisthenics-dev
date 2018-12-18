@@ -1,11 +1,24 @@
+.Instagram {
+  min-height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
 .instaFeed {
-    margin: 20px 0 20px 0;
     display: flex;
     justify-content: space-around;
     height: auto;
+    overflow: hidden;
 }
 
-.EmbeddedMedia {
-  width: 500px;
-  height: 400px;
+InstagramEmbed {
+  align-self: center;
+}
+
+.knapp {
+  align-self: center;
+  width: 30px;
+  height:50px;
 }

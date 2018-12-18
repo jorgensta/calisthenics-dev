@@ -1,10 +1,12 @@
 import React from 'react';
-
+import '../../styles/components/items/Contact.css';
 
 
 const Contact = () => (
-    <div>
-        <p>Contact</p>
+    <div className="Contact">
+        <div>
+        <p>Contact us</p>
+        </div>
     </div>
 )
 
