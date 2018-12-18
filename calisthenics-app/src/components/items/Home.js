@@ -22,6 +22,7 @@ const Home = () => {
         <Zoom>
             <img className="frontPic" alt="Forsidebilde Calisthenics"src={picture}></img>
         </Zoom>
+
         </div>
     )}
 export default Home;
