@@ -1,0 +1,11 @@
+.instaFeed {
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+}
+
+.EmbeddedMedia {
+  width: 500px;
+  height: 400px;
+}
