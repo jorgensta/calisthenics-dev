@@ -1,16 +1,14 @@
 .FAQcontainer{
     display: flex;
     flex-direction: column;
-    background-color: rgba(31,31,31,0.5);
+    background-color: rgba(0,0,0,0.6);
     justify-content: center;
     min-height: calc(100vh - 240px);
-    height: 1300px;
 }
 
 .Collapse{
     width: 40%;
     border: 1px solid white;
-    align-self: center;
     color: white;
     margin: 0.2rem;
     padding: 0.4rem;

@@ -1,7 +1,7 @@
 .Header {
     display: flex;
     justify-content: space-evenly;
-    background-color: rgba(31,31,31,0.5);
+    background-color: rgba(0,0,0,0.6);
     color: white;
     width: 100%;
     height: auto;

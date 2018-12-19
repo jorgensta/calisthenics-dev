@@ -1,7 +1,7 @@
 .Home{
     display: flex;
     justify-content: space-evenly;
-    background-color: rgba(31,31,31,0.5);
+    background-color: rgba(0,0,0,0.6);
     min-height: calc(100vh - 240px);
 }
 
@@ -21,13 +21,15 @@
     flex-direction: column;
     justify-content: center;
     width: 40%;
+    height:auto;
 }
 
 .frontText {
   text-align: center;
     align-self: center;
     color: #ffffff;
-    font-weight: 100;
+    font-weight: 600;
+    font-family: "Raleway";
     width: 80%;
     margin: 2%;
 }
@@ -49,4 +51,31 @@
 .applyButton:hover{
     color: yellow;
     border: 1px solid yellow;
+}
+
+.scheduleDivContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  color: white;
+}
+
+.scheduleHeader {
+  margin-bottom: 3px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+.scheduleTraining {
+  margin-bottom: 5px;
+  font-size: 27px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.boldFont {
+  font-weight: bold;
 }
