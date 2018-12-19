@@ -1,25 +1,32 @@
-
-
 .NavBar {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-left: 15%;
+    margin-left: 20%;
 }
 
 
 .navlink {
+    font-weight: bold;
+    font-family: "Raleway";
+    font-size: 21px;
+    
     display: flex;
     margin: 10px;
     color: white;
     padding: 5px;
-    border: 1px solid white;
     text-decoration: none;
     -webkit-transition-duration: 0.2s; /* Safari */
     transition-duration: 0.2s;
+    border-bottom: 2px solid transparent;
 }
 
 .navlink:hover{
     color: yellow;
-    border: 1px solid yellow;
+    border-bottom: 2px solid yellow;
+}
+
+.navlink:active{
+    color: #026736;
+    border-bottom: 2px solid #026736;
 }
