@@ -3,7 +3,7 @@
     flex-direction: column;
     background-color: rgba(0,0,0,0.6);
     justify-content: center;
-    min-height: calc(100vh - 240px);
+    min-height: calc(100vh - 244px);
 }
 
 .Collapse{
