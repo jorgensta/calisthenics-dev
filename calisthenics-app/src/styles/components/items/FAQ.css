@@ -1,9 +1,10 @@
 .FAQcontainer{
     display: flex;
     flex-direction: column;
-    background-color: #1f1f1f;
+    background-color: rgba(31,31,31,0.5);
     justify-content: center;
-    min-height: calc(100vh - 250px);
+    min-height: calc(100vh - 240px);
+    height: 1300px;
 }
 
 .Collapse{

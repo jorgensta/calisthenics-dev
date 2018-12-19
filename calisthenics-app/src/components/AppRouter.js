@@ -9,12 +9,20 @@ import FAQ from './items/FAQ';
 import Instagram from './items/Instagram';
 import Contact from './items/Contact';
 import Footer from './Footer';
+import backgroundImage from "../assets/bilde1.jpg";
 
+var wrapperStyle = {
+  backgroundImage: 'url(' + backgroundImage + ')',
+  backgroundAttachment: "fixed",
+
+  backgroundRepeat: "no-repeat",
+  backgroundSize:"cover",
+}
 
 const AppRouter = () => (
 
     <BrowserRouter>
-        <div className="wrapper">
+        <div className="wrapper" style={wrapperStyle}>
             <App />
                 <Switch>
                     <Route path="/" component={Home} exact={true}/>
