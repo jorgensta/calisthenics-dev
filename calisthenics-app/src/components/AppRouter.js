@@ -14,9 +14,9 @@ import backgroundImage from "../assets/bilde1.jpg";
 var wrapperStyle = {
   backgroundImage: 'url(' + backgroundImage + ')',
   backgroundAttachment: "fixed",
-
   backgroundRepeat: "no-repeat",
   backgroundSize:"cover",
+  backgroundColor: "black",
 }
 
 const AppRouter = () => (

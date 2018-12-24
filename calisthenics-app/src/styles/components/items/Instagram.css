@@ -14,12 +14,18 @@
     overflow: hidden;
 }
 
-InstagramEmbed {
-  align-self: center;
+#insta-feed {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  height:462px;
+  width: 750px;
+  justify-content: center;
 }
 
-.knapp {
-  align-self: center;
-  width: 30px;
-  height:50px;
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
