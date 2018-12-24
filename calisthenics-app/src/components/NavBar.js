@@ -11,7 +11,6 @@ const NavBar = () => (
         <NavLink className="navlink" to="/instagram">Instagram</NavLink>
         <NavLink className="navlink" to="/contact">Contact us</NavLink>
         <NavLink className="navlink" to="/faq">F.A.Q.</NavLink>
-        
     </div>
 )
 

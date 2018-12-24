@@ -3,17 +3,69 @@
     flex-direction: column;
     background-color: rgba(0,0,0,0.6);
     justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Railway';
     min-height: calc(100vh - 244px);
 }
 
-.Collapse{
-    width: 40%;
-    border: 1px solid white;
-    color: white;
-    margin: 0.2rem;
-    padding: 0.4rem;
-}
+.accordion {
+    border-radius: 5px;
+    border: 1px solid #777;;
+  }
+  .accordion .accordion-item:first-child .title {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .accordion .accordion-item:last-child .title {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .accordion .accordion-item .title {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    font-size: 20px;
+    width: 500px;
+    border: none;
+    outline: none;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .accordion .accordion-item .title:after {
+    content: '\2795';
+    font-size: 20px;
+    color: #444;
+    float: right;
+    margin-left: 5px;
+  }
+  .accordion .accordion-item .panel {
+    max-height: 0;
+    -webkit-transition: max-height 0.15s ease-out;
+    -o-transition: max-height 0.15s ease-out;
+    transition: max-height 0.15s ease-out;
+    background: #777;
+    overflow: hidden;
+  }
+  .accordion .accordion-item.active .title {
+    background-color: #eee;
+  }
+  .accordion .accordion-item.active .title:after {
+    content: '\2796';
+  }
+  .accordion .accordion-item.active .panel {
+    max-height: 500px;
+    -webkit-transition: max-height 0.25s ease-in;
+    -o-transition: max-height 0.25s ease-in;
+    transition: max-height 0.25s ease-in;
+    background: #777;
+  }
+  /*# sourceMappingURL=index.css.map*/
 
-.FAQtext {
-    color: white;
-}
+
+
+  
