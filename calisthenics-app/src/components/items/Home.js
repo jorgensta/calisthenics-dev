@@ -16,7 +16,7 @@ const Home = () => {
             circus artistists, tricking dudes, gymnastics and raw calisthenics strength.
             </p>
 
-            <a href="https://docs.google.com/forms/d/18Juyj22opQFylISBQYKHBxOd4HtJR-gquAKkr5k35h4/" target="_blank" className="applyButton">Apply now</a>
+            <a href="https://docs.google.com/forms/d/18Juyj22opQFylISBQYKHBxOd4HtJR-gquAKkr5k35h4/" rel="noopener noreferrer" target="_blank" className="applyButton">Apply now</a>
             </Zoom>
             </div>
 
