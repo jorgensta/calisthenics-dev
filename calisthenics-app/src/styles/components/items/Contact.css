@@ -18,3 +18,22 @@
   border: 1px solid white;
   width: 500px;
 }
+
+
+.mailContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.mailContainer div{
+  border: 0px;
+
+}
+
+.mailContainer form{
+  margin: 10px;
+
+}
+.mailContainer form div{
+  margin: 0px;
+}
