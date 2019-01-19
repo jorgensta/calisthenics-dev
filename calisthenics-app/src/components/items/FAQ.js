@@ -13,6 +13,7 @@ class FAQ extends React.Component {
 
 
     renderSections = () => {
+        
         return data.map((data,index) => (
             <AccordionItem title={data.title}><FAQitem content={data.content} /></AccordionItem>
         ))

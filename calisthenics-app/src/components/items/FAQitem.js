@@ -3,7 +3,7 @@ import '../../styles/components/items/FAQ.css'
 
 
 const FAQitem = (props) => (
-    <div className={"section"}>
+    <div className="section">
         <p>{props.content}</p>
     </div>
 )

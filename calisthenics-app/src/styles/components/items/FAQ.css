@@ -12,6 +12,7 @@
 .accordion {
     border-radius: 5px;
     border: 1px solid #777;;
+    opacity: 60%;
   }
   .accordion .accordion-item:first-child .title {
     border-top-left-radius: 5px;
@@ -65,6 +66,9 @@
     background: #777;
   }
   /*# sourceMappingURL=index.css.map*/
+
+
+
 
 
 
