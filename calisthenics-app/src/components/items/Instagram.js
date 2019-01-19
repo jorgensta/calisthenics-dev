@@ -1,70 +1,56 @@
 import React from 'react';
-import InstagramEmbed from 'react-instagram-embed'
 import Zoom from 'react-reveal/Zoom';
 import '../../styles/components/items/Instagram.css';
-var accessToken = '3098531026.1677ed0.e8c4ee4585184111bc75a5506d2b0fbe';
-let InstagramAPI = require('instagram-api');
-var instagramAPI = new InstagramAPI(accessToken);
+import InstagramItem from './InstagramItem';
+const newToken = "3098531026.d6d68a3.57098e5aa962411cbe5d1333737358df"
+const userID = ''
+
+// const instafeedTarget = 'instafeed';
+//   return (
+//     <div id={instafeedTarget}>
+//       <Instafeed
+//         limit='5'
+//         ref='instafeed'
+//         resolution='standard_resolution'
+//         sortBy='most-recent'
+//         target={instafeedTarget}
+//         template=''
+//         userId=
+//         clientId='clientIdInstagramApiString'
+//         accessToken='accessTokenInstagramApiString'
+//       />
+//     </div>
+
 
 
 class Instagram extends React.Component {
 
     state = {
-        data: [],
-        postIndex: 0,
-    }
-
-    loadNextPost = () => {
-      let index = this.state.postIndex +1;
-      this.setState({postIndex:index});
-      instagramAPI.userSelfMedia().then(function(result) {
-          let url = result.data[index].link;
-          console.log(url);
-          return url;
-      }).then(url => this.setState({data:url}));
-    }
-
-
-    loadPreviousPost = () => {
-      if (this.state.postIndex >= 1) {
-        let index = this.state.postIndex -1;
-        this.setState({postIndex:index});
-        instagramAPI.userSelfMedia().then(function(result) {
-            let url = result.data[index].link;
-            return url;
-        }).then(url => this.setState({data:url}));
-      }
-      else {
-        console.log("Fail, du ser allerede på den nyeste posten.");
-      }
-      console.log(this.state.postIndex);
+        imageURLS: []
     }
 
 
     componentDidMount(){
-      instagramAPI.userSelfMedia().then(function(result) {
-          let url = result.data[0].link;
-          console.log(url);
-          return url;
-      }).then(url => this.setState({data:url}));
+        const url = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${newToken}`;
+        fetch(url).then((res) => res.json()).then(res => {
+            const imageURLS = []
+            res.data.map(data => {
+                imageURLS.push({url: data.images.standard_resolution.url, link: data.link})
+            })
+            this.setState({imageURLS})
+        })
+    }
 
+
+    renderImages = () => {
+        return this.state.imageURLS.map(im => <InstagramItem key={im.url} src={im.url} link={im.link} />)
     }
 
     render(){
-        let data = this.state.data;
 
         return(
         <div className="Instagram">
-        <Zoom >
-            <div className="instaFeed">
-
-                <button className="knapp" onClick={this.loadPreviousPost}> </button>
-                <InstagramEmbed url={data} maxWidth={320}></InstagramEmbed>
-
-                <button className="knapp" onClick={this.loadNextPost}> </button>
-
-            </div>
-        </Zoom>
+            {this.renderImages()}
         </div>
         )
     }
