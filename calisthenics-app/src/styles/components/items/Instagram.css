@@ -1,25 +1,17 @@
 .Instagram {
   min-height: calc(100vh - 244px);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
   background-color: rgba(0,0,0,0.6);
 }
 
-.instaFeed {
-    display: flex;
-    justify-content: space-around;
-    height: auto;
-    overflow: hidden;
+
+.pictureContainer {
+  width: 60%;
+  height: 60%;
 }
 
-InstagramEmbed {
-  align-self: center;
-}
 
-.knapp {
-  align-self: center;
-  width: 30px;
-  height:50px;
+.pictureContainer img{
+  width: inherit;
+  height: inherit;
 }

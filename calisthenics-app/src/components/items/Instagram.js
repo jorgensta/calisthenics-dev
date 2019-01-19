@@ -1,8 +1,7 @@
 import React from 'react';
-import InstagramEmbed from 'react-instagram-embed'
 import Zoom from 'react-reveal/Zoom';
 import '../../styles/components/items/Instagram.css';
-import { type } from 'os';
+import InstagramItem from './InstagramItem';
 const newToken = "3098531026.d6d68a3.57098e5aa962411cbe5d1333737358df"
 const userID = ''
 
@@ -30,22 +29,26 @@ class Instagram extends React.Component {
         imageURLS: []
     }
 
-    fetchData = () => {
+
+    componentDidMount(){
         const url = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${newToken}`;
-        fetch(url).then((res) => res.json()).then(data => {
-            console.log(data)
+        fetch(url).then((res) => res.json()).then(res => {
+            const imageURLS = []
+            res.data.map(data => imageURLS.push(data.images.standard_resolution.url))
+            this.setState({imageURLS})
         })
+    }
+
+
+    renderImages = () => {
+        return this.state.imageURLS.map(url => <InstagramItem src={url} />)
     }
 
     render(){
 
         return(
         <div className="Instagram">
-        <Zoom >
-            <div className="instaFeed">
-            {this.fetchData()}
-            </div>
-        </Zoom>
+            {this.renderImages()}
         </div>
         )
     }
