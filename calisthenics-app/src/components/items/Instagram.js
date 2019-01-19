@@ -34,14 +34,16 @@ class Instagram extends React.Component {
         const url = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${newToken}`;
         fetch(url).then((res) => res.json()).then(res => {
             const imageURLS = []
-            res.data.map(data => imageURLS.push(data.images.standard_resolution.url))
+            res.data.map(data => {
+                imageURLS.push({url: data.images.standard_resolution.url, link: data.link})
+            })
             this.setState({imageURLS})
         })
     }
 
 
     renderImages = () => {
-        return this.state.imageURLS.map(url => <InstagramItem src={url} />)
+        return this.state.imageURLS.map(im => <InstagramItem key={im.url} src={im.url} link={im.link} />)
     }
 
     render(){

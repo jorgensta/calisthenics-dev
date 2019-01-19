@@ -5,7 +5,9 @@ import '../../styles/components/items/Instagram.css';
 
 const InstagramItem = (props) => (
     <div className="pictureContainer">
-        <img src={props.src}></img>
+        <a href={props.link}>
+            <img src={props.src}></img>
+        </a>
     </div>
 )
 

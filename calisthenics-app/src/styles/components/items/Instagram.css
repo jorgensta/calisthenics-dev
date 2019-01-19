@@ -2,16 +2,23 @@
   min-height: calc(100vh - 244px);
   display: flex;
   background-color: rgba(0,0,0,0.6);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
 .pictureContainer {
-  width: 60%;
-  height: 60%;
+  width: auto;
+  height: auto;
 }
 
 
 .pictureContainer img{
-  width: inherit;
-  height: inherit;
+  width: 350px;
+  margin: 10px;
+  height: auto;
+}
+
+.pictureContainer img:hover{
+  cursor: pointer;
 }
