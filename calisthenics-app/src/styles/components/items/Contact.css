@@ -3,11 +3,18 @@
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: rgba(0,0,0,0.6);
 }
 
 
-.sectionContent {
-  overflow: hidden
+.Contact .contactContainer{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.contactContainer div{
+  margin: 10px;
+  border: 1px solid white;
+  width: 500px;
 }
