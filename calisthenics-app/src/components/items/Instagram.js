@@ -1,5 +1,4 @@
 import React from 'react';
-import InstagramEmbed from 'react-instagram-embed'
 import Zoom from 'react-reveal/Zoom';
 import Modal from '@material-ui/core/Modal';
 import ReactDOM from 'react-dom';
@@ -34,7 +33,6 @@ class Instagram extends React.Component {
           console.log(imageArray);
       })
     }
-
     async fetchByID(selectedpicture) {
       const url = `https://api.instagram.com/v1/media/`+ selectedpicture.id + `/?access_token=${newToken}`;
       await fetch(url).then((res) => res.json()).then(data => {
@@ -47,6 +45,7 @@ class Instagram extends React.Component {
           console.log("dette er et bilde");
         }
       })
+
     }
 
     handleOpen = (selectedpicture) => {

@@ -1,11 +1,11 @@
 .Instagram {
   min-height: calc(100vh - 244px);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
   background-color: rgba(0,0,0,0.6);
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 
 .instaFeed {
   display: flex;
