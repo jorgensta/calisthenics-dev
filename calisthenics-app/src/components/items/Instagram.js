@@ -1,11 +1,11 @@
 import React from 'react';
-import InstagramEmbed from 'react-instagram-embed'
 import Zoom from 'react-reveal/Zoom';
 import Modal from '@material-ui/core/Modal';
 import ReactDOM from 'react-dom';
 import '../../styles/components/items/Instagram.css';
 const newToken = "3098531026.d6d68a3.57098e5aa962411cbe5d1333737358df";
 const userID = '';
+
 
 class Instagram extends React.Component {
 
@@ -21,6 +21,7 @@ class Instagram extends React.Component {
           this.setState({ imageInfo: data });
           console.log(this.state.imageInfo);
       })
+
     }
 
     componentDidMount() {
@@ -47,6 +48,7 @@ class Instagram extends React.Component {
           console.log("dette er et bilde");
         }
       })
+
     }
 
     handleOpen = (selectedpicture) => {
