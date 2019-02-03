@@ -11,7 +11,7 @@ class FAQ extends React.Component {
     renderSections = () => {
 
         return faqdata.map((data,index) => (
-            <AccordionItem title={data.title}><FAQitem content={data.content} title={data.title} /></AccordionItem>
+            <AccordionItem key={data.title} title={data.title}><FAQitem content={data.content} title={data.title} /></AccordionItem>
         ))
     }
 

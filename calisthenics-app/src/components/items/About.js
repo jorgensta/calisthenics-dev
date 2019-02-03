@@ -1,11 +1,15 @@
 import React from 'react';
+
+import BoardMemberItem from './about/BoardMemberItem';
 import '../../styles/components/items/About.css';
+import {boardMembers} from '../../assets/boardMembers/boardMembers';
 
 
 const About = () => (
     <div className="About">
-        AccessToken: 3098531026.1677ed0.e8c4ee4585184111bc75a5506d2b0fbe
-        
+    {boardMembers.map((member, index) => (
+        <BoardMemberItem key={index} member={member} />
+    ))}
     </div>
 )
 

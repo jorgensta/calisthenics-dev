@@ -4,6 +4,13 @@
   color: white;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   background-color: rgba(0,0,0,0.6);
+}
+
+
+.boardMember {
+  margin: 10x;
+  padding: 5px;
 }
