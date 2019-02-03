@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import NavBar from './NavBar';
 import '../styles/components/Header.css';
 import {NavLink} from 'react-router-dom';
