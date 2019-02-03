@@ -67,7 +67,7 @@ class Instagram extends React.Component {
       if (this.state.imageInfo) {
         thumbnails = this.state.imageInfo.map(imageObject => {
           return (
-                    <div onClick={() => this.handleOpen(imageObject)} className="insta-thumbnail">
+                    <div style={{cursor: 'pointer'}} onClick={() => this.handleOpen(imageObject)} className="insta-thumbnail">
                     <img alt="as" src={imageObject.images.thumbnail.url}/>
                     </div>
                   )
