@@ -4,8 +4,13 @@ import '../../styles/components/items/Contact.css';
 
 const Contact = () => (
     <div className="Contact">
-        <div>
-        <p>Contact us</p>
+        <div className="contactContainer">
+            <div>
+                Facebook
+            </div>
+            <div>
+                Mail
+            </div>
         </div>
     </div>
 )
