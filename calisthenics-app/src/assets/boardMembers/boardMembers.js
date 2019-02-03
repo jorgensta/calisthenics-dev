@@ -20,9 +20,15 @@ export const boardMembers = [
         picture: 'insertPictureHere'
     },
     {
-        position: 'Social responsible',
+        position: 'Social planner',
         firstName: 'Sofie',
         lastName: 'Houge',
+        picture: 'insertPictureHere'
+    },
+    {
+        position: 'Sports events',
+        firstName: 'Undefined',
+        lastName: 'Undefined',
         picture: 'insertPictureHere'
     },
     {
