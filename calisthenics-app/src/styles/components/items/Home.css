@@ -1,0 +1,85 @@
+.Home{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0,0,0,0.6);
+    min-height: calc(100vh - 244px);
+}
+
+.frontPic {
+    min-width: 400px;
+    min-height: 300px;
+    width: 45%;
+    height: 70%;
+    max-width: 700px;
+    max-height: 500px;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.homeTextDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    font-weight: 200;
+    height:auto;
+}
+
+.frontText {
+  text-align: center;
+    align-self: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Raleway";
+    width: 80%;
+    margin: 2%;
+}
+
+.applyButton{
+    align-self: center;
+    text-align: center;
+    width: 200px;
+    font-size: 30px;
+    margin: 10px;
+    color: white;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: 1px solid white;
+    text-decoration: none;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.applyButton:hover{
+    color: yellow;
+    border: 1px solid yellow;
+}
+
+.scheduleDivContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  color: white;
+}
+
+.scheduleHeader {
+  margin-bottom: 3px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+.scheduleTraining {
+  margin-bottom: 5px;
+  font-size: 27px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.boldFont {
+  font-weight: bold;
+}

@@ -1,0 +1,9 @@
+.About {
+  box-sizing: border-box;
+  min-height: calc(100vh - 244px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.6);
+}

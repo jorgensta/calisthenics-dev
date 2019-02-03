@@ -1,0 +1,39 @@
+.Contact {
+  min-height: calc(100vh - 244px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.6);
+}
+
+
+.Contact .contactContainer{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.contactContainer div{
+  margin: 10px;
+  border: 1px solid white;
+  width: 500px;
+}
+
+
+.mailContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.mailContainer div{
+  border: 0px;
+
+}
+
+.mailContainer form{
+  margin: 10px;
+
+}
+.mailContainer form div{
+  margin: 0px;
+}

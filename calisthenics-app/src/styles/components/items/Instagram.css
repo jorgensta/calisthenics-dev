@@ -1,0 +1,35 @@
+.Instagram {
+  min-height: calc(100vh - 244px);
+  display: flex;
+  background-color: rgba(0,0,0,0.6);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.instaFeed {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  overflow: hidden;
+}
+
+.insta-feed {
+  display: flex;
+  flex-wrap:wrap;
+  height:450px;
+  width: 612px;
+  justify-content: space-between;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.modalPicture {
+  max-width: 400px;
+  max-height: 480px;
+}

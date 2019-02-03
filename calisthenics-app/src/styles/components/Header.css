@@ -1,12 +1,12 @@
 .Header {
     display: flex;
     justify-content: space-evenly;
-    background: #0e1111;
+    background-color: rgba(0,0,0,0.6);
     color: white;
     width: 100%;
+    height: auto;
 }
 
-
 .img-header {
-    margin: 10px;
+    margin: 20px;
 }
