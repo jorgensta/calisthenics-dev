@@ -6,19 +6,29 @@
   justify-content: center;
 }
 
-
-.pictureContainer {
-  width: auto;
+.instaFeed {
+  display: flex;
+  justify-content: center;
   height: auto;
+  overflow: hidden;
 }
 
-
-.pictureContainer img{
-  width: 350px;
-  margin: 10px;
-  height: auto;
+.insta-feed {
+  display: flex;
+  flex-wrap:wrap;
+  height:450px;
+  width: 612px;
+  justify-content: space-between;
 }
 
-.pictureContainer img:hover{
-  cursor: pointer;
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.modalPicture {
+  max-width: 400px;
+  max-height: 480px;
 }
