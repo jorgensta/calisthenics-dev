@@ -8,7 +8,7 @@
 
 .instaFeed {
   display: flex;
-  justify-content: center;
+  align-items: center;
   height: auto;
   overflow: hidden;
 }
@@ -28,7 +28,24 @@
   color: white;
 }
 
+.modalContainer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 600px;
+}
+
+.instagramText {
+  display: flex;
+  justify-content: center;
+}
+
+.modalMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .modalPicture {
-  max-width: 400px;
-  max-height: 480px;
+  max-height: 750px;
 }
