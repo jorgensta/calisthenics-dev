@@ -1,10 +1,8 @@
 import React from 'react';
 import Zoom from 'react-reveal/Zoom';
 import Modal from '@material-ui/core/Modal';
-import ReactDOM from 'react-dom';
 import '../../styles/components/items/Instagram.css';
 const newToken = "3098531026.d6d68a3.57098e5aa962411cbe5d1333737358df";
-const userID = '';
 
 
 class Instagram extends React.Component {
@@ -48,12 +46,12 @@ class Instagram extends React.Component {
           console.log("dette er et bilde");
         }
       })
+      this.setState({ open: true });
 
     }
 
     handleOpen = (selectedpicture) => {
       this.fetchByID(selectedpicture);
-      this.setState({ open: true });
     };
 
     handleClose = () => {
@@ -67,7 +65,7 @@ class Instagram extends React.Component {
       if (this.state.imageInfo) {
         thumbnails = this.state.imageInfo.map(imageObject => {
           return (
-                    <div style={{cursor: 'pointer'}} onClick={() => this.handleOpen(imageObject)} className="insta-thumbnail">
+                    <div key={imageObject.images.thumbnail.url} style={{cursor: 'pointer'}} onClick={() => this.handleOpen(imageObject)} className="insta-thumbnail">
                     <img alt="as" src={imageObject.images.thumbnail.url}/>
                     </div>
                   )
@@ -79,19 +77,31 @@ class Instagram extends React.Component {
 
       if (this.state.modalInfo.videos) {
         modalContent = (
-        <video width="auto" height="auto" controls>
-        <source src={this.state.modalInfo.videos.standard_resolution.url} type="video/mp4"/>
-        </video>
+        <div className="modalContainer">
+            <div className="modalMedia">
+                <video width="auto" height="auto" controls>
+                    <source src={this.state.modalInfo.videos.standard_resolution.url} type="video/mp4"/>
+                </video>
+            </div>
+            <div className="instagramText">
+                Se denne videoen og mange flere på vår instagram! [Insert link her]
+            </div>
+        </div>
       )
       }
       else if (this.state.modalInfo.images) {
         modalContent = (
-        <div className="modalcontent">
-        <img className="modalPicture" alt="" src={this.state.modalInfo.images.standard_resolution.url} />
+        <div className="modalContainer">
+            <div className="modalMedia">
+                <img className="modalPicture" alt="" src={this.state.modalInfo.images.standard_resolution.url} />
+            </div>
+            <div className="instagramText">
+                Se dette bildet og mange flere på vår instagram! [Insert link her]
+            </div>
         </div>
       )
       }
-      else { modalContent = (<div></div>)
+      else { modalContent = (<div>heiheihei</div>)
       }
 
 
@@ -106,12 +116,11 @@ class Instagram extends React.Component {
                   className="modal"
                   open={this.state.open}
                   onClose={this.handleClose}
+
                 >
-
-
-                {modalContent}
-
+                    {modalContent}
                 </Modal>
+
 
                 {thumbnails}
 
