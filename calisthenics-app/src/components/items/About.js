@@ -4,7 +4,9 @@ import BoardMemberItem from './about/BoardMemberItem';
 import '../../styles/components/items/About.css';
 import {boardMembers} from '../../assets/boardMembers/boardMembers';
 
+
 import Fade from 'react-reveal/Fade';
+import SwipableView from 'react-swipeable-views';
 
 
 const About = () => (
