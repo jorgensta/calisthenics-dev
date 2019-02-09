@@ -29,7 +29,7 @@ export const boardMembers = [
         position: 'Sports events',
         firstName: 'Undefined',
         lastName: 'Undefined',
-        picture: 'insertPictureHere'
+        picture: 'https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-1/c379.0.1290.1290a/1402926_10150004552801901_469209496895221757_o.jpg?_nc_cat=1&_nc_ht=scontent-arn2-1.xx&oh=5c1648b7f7953029eebb7e4a6a7773af&oe=5CEA589E'
     },
     {
         position: 'Trainer',

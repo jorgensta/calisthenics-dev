@@ -1,35 +1,46 @@
-import React from 'react';
-import '../../styles/components/items/Home.css';
-import Zoom from 'react-reveal/Zoom';
+import React, {useState} from 'react';
+import SwipeableViews from 'react-swipeable-views';
+import { bindKeyboard, autoPlay} from 'react-swipeable-views-utils';
+import flowRight from 'lodash/flowRight';
+import Dots from 'react-carousel-dots';
 
+import Apply from './Home/Apply';
+import Schedule from './Home/Schedule';
+import Trip from './Home/Trip';
+import Workshops from './Home/Workshops';
+
+import '../../styles/components/items/Home.css';
+
+const KeyBoard = flowRight(
+  bindKeyboard,
+  autoPlay,
+)(SwipeableViews);
 
 const Home = () => {
-  return (
-        <div className="Home">
-            <div className="homeTextDiv">
-            <Zoom>
-            <p className="frontText">Formed in 2015, NTNUI Calisthenics has grown
-            into a extraordinary group with enthusiasm, strength and companionship
-            from a tremendous disparate group of students. We are currently
-            Norways largest calisthenics community. The group is composed of
-            circus artistists, tricking dudes, gymnastics and raw calisthenics strength.
-            </p>
 
-            <a href="https://docs.google.com/forms/d/18Juyj22opQFylISBQYKHBxOd4HtJR-gquAKkr5k35h4/" rel="noopener noreferrer" target="_blank" className="applyButton">Apply now!</a>
-            </Zoom>
-            </div>
-            <Zoom>
-            <div className="scheduleDivContainer">
-              <div className="scheduleDiv">
-                <div className="scheduleHeader">Training hours</div>
-                <div className="scheduleTraining"><span className="boldFont">Tuesday</span> 16:00-17:50 SiT Portalen</div>
-                <div className="scheduleTraining"><span className="boldFont">Friday</span> 19:00-21:00 Gymfit</div>
-                <div className="scheduleTraining"><span className="boldFont">Sunday</span> 19:00-21:00 Gymfit</div>
-              </div>
-            </div>
-            </Zoom>
-            </div>
-            
-    )}
+  const [index, setIndex] = useState(0);
+
+  return (
+    <div className="Home">
+      <KeyBoard
+        className="keyboard"
+        interval={5000}
+        onChangeIndex={(index) =>{
+          setIndex(index);
+      }}>
+        <Apply />
+        <Schedule />
+        <Trip />
+        <Workshops />
+      </KeyBoard>
+      <Dots
+        className="Dots"
+        length={4}
+        active={index}
+        size={20}
+      />
+  </div>
+    )
+  };
 
 export default Home;

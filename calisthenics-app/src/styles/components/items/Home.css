@@ -1,8 +1,72 @@
 .Home{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     background-color: rgba(0,0,0,0.6);
     min-height: calc(100vh - 244px);
+}
+
+
+.TripContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.react-swipeable-view-container{
+    align-items: center;
+}
+.react-swipeable-view-container div{
+    padding-bottom: 1%;
+}
+
+.TripContainer h3{
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Raleway";
+    padding-right: 10%;
+
+
+}
+
+.Dots {
+    display: flex;
+    justify-content: center;
+}
+
+.dot-holder {
+    padding: 0 2px 0 2px;
+}
+
+.react-carousel-dots-dot{
+    color: black;
+    background: black;
+    opacity: 0.6;
+    border: 1px solid gray;
+}
+
+.react-carousel-dots-dot.active{
+    color: white;
+    background: white;
+    opacity: 1;
+    border: 1px solid gray;
+
+
+}
+
+.homeTextDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.frontText{
+    justify-self: center;
+    align-self: center;
+    font-family: "Raleway";
+    width: 40%;
+    color: #ffffff;
 }
 
 .frontPic {
@@ -16,25 +80,6 @@
     border-radius: 5px;
 }
 
-.homeTextDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    font-weight: 200;
-    height:auto;
-}
-
-.frontText {
-  text-align: center;
-    align-self: center;
-    color: #ffffff;
-    font-weight: 600;
-    font-family: "Raleway";
-    width: 80%;
-    margin: 2%;
-}
 
 .applyButton{
     align-self: center;
@@ -61,7 +106,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
   color: white;
 }
 
